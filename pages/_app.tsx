@@ -7,7 +7,8 @@ const kanit = Kanit({
   subsets: ["thai"],
   variable: "--font-kanit",
   style: ["normal", "italic"],
-  weight: ["100", "200", "500", "700"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

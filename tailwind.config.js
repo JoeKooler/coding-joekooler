@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["var(--font-kanit)", ...fontFamily.sans],
+      sans: ["var(--font-kanit)"],
     },
     extend: {
       colors: {
