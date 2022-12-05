@@ -7,6 +7,8 @@ import linkedInIcon from "../public/social_icons/mono_linkedin.png";
 import githubIcon from "../public/social_icons/mono_github.png";
 import twitterIcon from "../public/social_icons/mono_twitter.png";
 import Link from "next/link";
+import ProjectCard from "../components/ProjectCard/project_card";
+import ProjectCardMock from "../components/ProjectCard/project_card.mock";
 
 // Todo
 // Finish Each section
@@ -19,13 +21,13 @@ export default function Home() {
       <section
         className={`min-h-screen bg-center bg-no-repeat bg-cover bg-[url('/joe_bg.png')]`}
       >
-        <div className="md:invisible w-20 h-20 md:hidden pt-4 -0 pl-4">
+        <div className="w-20 h-20 lg:hidden pt-4 -0 pl-4">
           <button className="w-16 h-16">
             <Image src={hamburgerIcon} alt={"hamburgerIcon"} />
           </button>
         </div>
 
-        <li className="hidden px-[25vw] h-24 text-white md:grid md:grid-cols-5 gap-4 justify-center content-center justify-items-center">
+        <li className="hidden px-[25vw] h-24 text-white lg:grid lg:grid-cols-5 gap-4 justify-center content-center justify-items-center">
           <Link href="/" className="text-3xl z-10 underline">
             Home
           </Link>
@@ -44,7 +46,7 @@ export default function Home() {
           <div className="absolute w-full h-24 bg-black opacity-25" />
         </li>
 
-        <div className="mx-auto md:mx-0 md:ml-[30vw] xl:ml-[55vw] md:pr-24 text-center md:text-left px-4 ">
+        <div className="mx-auto md:mx-0 md:ml-[20vw] lg:ml-[40vw] xl:ml-[45vw] 2xl:ml-[55vw] md:pr-24 text-center md:text-left px-4 ">
           <div className="pt-[12vh]"></div>
           <b className="text-3xl md:text-5xl text-white font-normal">
             Greetings!
@@ -67,25 +69,27 @@ export default function Home() {
           </h1>
 
           <div className="mt-6 md:mt-12" />
-          <div className="px-14 grid grid-cols-4 md:grid-cols-10 gap-4 md:px-0">
-            <Link href={"https://github.com/JoeKooler"}>
-              <Image src={githubIcon} alt={"githubIcon"}></Image>
+          <div className="px-14 justify-center md:justify-start flex md:px-0">
+            <Link href={"https://github.com/JoeKooler"} className="mr-4">
+              <Image src={githubIcon} alt={"githubIcon"} className="duration-500 hover:invert"></Image>
             </Link>
             <Link
               href={
                 "https://www.linkedin.com/in/chitsanupong-klaithin-729b97162/"
               }
+              className="mr-4"
             >
-              <Image src={linkedInIcon} alt={"linkedInIcon"}></Image>
+              <Image src={linkedInIcon} alt={"linkedInIcon"} className="duration-500 hover:invert"></Image>
             </Link>
-            <Link href={"https://twitter.com/CodingJoekooler"}>
-              <Image src={twitterIcon} alt={"twitterIcon"}></Image>
+            <Link href={"https://twitter.com/CodingJoekooler"} className="mr-4">
+              <Image src={twitterIcon} alt={"twitterIcon"} className="duration-500 hover:invert"></Image>
             </Link>
 
             <Link
               href={"https://www.youtube.com/channel/UCfzx0Ga-7_tzLM-HSrBB67w"}
+              className="mr-4"
             >
-              <Image src={youtubeIcon} alt={"youtubeIcon"}></Image>
+              <Image src={youtubeIcon} alt={"youtubeIcon"} className="duration-500 hover:invert"></Image>
             </Link>
           </div>
 
@@ -110,39 +114,9 @@ export default function Home() {
         <div className="pt-16"></div>
 
         <div className="flex flex-nowrap flex-shrink-0 overflow-x-auto">
-          <div className="w-80 md:w-[32rem] flex-shrink-0 rounded-2xl overflow-hidden mr-5 md:mr-10 last:mr-0">
-            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('/project_img/oic_banner.jpg')]"></div>
-            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
-              <p className="text-literalBlack text-2xl h-24 overflow-clip text-ellipsis">
-                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
-              </p>
-              <div className="h-[1px] w-full bg-backgroundGrey"></div>
-              <div className="pt-2"></div>
-              <div className="flex">
-                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">C#</div>
-                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">Unity</div>
-                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">UniRX</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-80 md:w-[32rem] rounded-2xl flex-shrink-0 overflow-hidden mr-5 md:mr-10 last:mr-0">
-            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('/project_img/oic_banner.jpg')]"></div>
-            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
-              <p className="text-literalBlack text-2xl h-16 overflow-clip text-ellipsis">
-                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
-              </p>
-            </div>
-          </div>
-
-          <div className="w-80 md:w-[32rem] rounded-2xl flex-shrink-0 overflow-hidden mr-5 md:mr-10 last:mr-0">
-            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('https://scontent.fubp1-1.fna.fbcdn.net/v/t1.15752-9/316573737_547695580146752_4812529344706106324_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFHzjJ_qNMWT2toA0eXlz6jJ6jDKPkFrH0nqMMo-QWsfbwztK0zC19aRi_Daqkmf35vZbSADoultoYk4_af7bb5&_nc_ohc=-vxzGxcOGvUAX8z2NAv&_nc_ht=scontent.fubp1-1.fna&oh=03_AdShkOqQg60ZG_Ppb-yMd2f3wPL_N_CwF65IIT8UHF7o8A&oe=63B4DB30')]"></div>
-            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
-              <p className="text-literalBlack text-2xl h-16 overflow-clip text-ellipsis">
-                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
-              </p>
-            </div>
-          </div>
+          <ProjectCardMock />
+          <ProjectCardMock />
+          <ProjectCardMock />
         </div>
       </section>
     </div>
