@@ -7,11 +7,17 @@ import linkedInIcon from "../public/social_icons/mono_linkedin.png";
 import githubIcon from "../public/social_icons/mono_github.png";
 import twitterIcon from "../public/social_icons/mono_twitter.png";
 import Link from "next/link";
+
+// Todo
+// Finish Each section
+// Extract Styles to Design System
+// Refactor later to prevent premature abstraction
+
 export default function Home() {
   return (
     <div>
       <section
-        className={`w-screen h-screen bg-center md:bg-left bg-no-repeat bg-cover bg-[url('/joe_bg.png')]`}
+        className={`min-h-screen bg-center bg-no-repeat bg-cover bg-[url('/joe_bg.png')]`}
       >
         <div className="md:invisible w-20 h-20 md:hidden pt-4 -0 pl-4">
           <button className="w-16 h-16">
@@ -38,7 +44,7 @@ export default function Home() {
           <div className="absolute w-full h-24 bg-black opacity-25" />
         </li>
 
-        <div className="mx-auto md:mx-0 md:ml-[55vw] md:pr-24 text-center md:text-left px-4 ">
+        <div className="mx-auto md:mx-0 md:ml-[30vw] xl:ml-[55vw] md:pr-24 text-center md:text-left px-4 ">
           <div className="pt-[12vh]"></div>
           <b className="text-3xl md:text-5xl text-white font-normal">
             Greetings!
@@ -83,7 +89,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-10"/>
+          <div className="mt-10" />
           <div className="text-white">
             <h1>Have an idea? Drop me a message at</h1>
             <address>
@@ -91,6 +97,51 @@ export default function Home() {
                 <u>josephkoolerson@gmail.com</u>
               </a>
             </address>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen bg-backgroundGrey text-white px-6 md:px-[8.5rem]">
+        <div className="pt-20" />
+        <div className="w-full text-center">
+          <b className="text-3xl md:text-5xl">Featured Projects</b>
+        </div>
+
+        <div className="pt-16"></div>
+
+        <div className="flex flex-nowrap flex-shrink-0 overflow-x-auto">
+          <div className="w-80 md:w-[32rem] flex-shrink-0 rounded-2xl overflow-hidden mr-5 md:mr-10 last:mr-0">
+            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('/project_img/oic_banner.jpg')]"></div>
+            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
+              <p className="text-literalBlack text-2xl h-24 overflow-clip text-ellipsis">
+                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
+              </p>
+              <div className="h-[1px] w-full bg-backgroundGrey"></div>
+              <div className="pt-2"></div>
+              <div className="flex">
+                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">C#</div>
+                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">Unity</div>
+                <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">UniRX</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-80 md:w-[32rem] rounded-2xl flex-shrink-0 overflow-hidden mr-5 md:mr-10 last:mr-0">
+            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('/project_img/oic_banner.jpg')]"></div>
+            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
+              <p className="text-literalBlack text-2xl h-16 overflow-clip text-ellipsis">
+                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
+              </p>
+            </div>
+          </div>
+
+          <div className="w-80 md:w-[32rem] rounded-2xl flex-shrink-0 overflow-hidden mr-5 md:mr-10 last:mr-0">
+            <div className="h-52 md:h-80 bg-center bg-no-repeat bg-cover bg-[url('https://scontent.fubp1-1.fna.fbcdn.net/v/t1.15752-9/316573737_547695580146752_4812529344706106324_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFHzjJ_qNMWT2toA0eXlz6jJ6jDKPkFrH0nqMMo-QWsfbwztK0zC19aRi_Daqkmf35vZbSADoultoYk4_af7bb5&_nc_ohc=-vxzGxcOGvUAX8z2NAv&_nc_ht=scontent.fubp1-1.fna&oh=03_AdShkOqQg60ZG_Ppb-yMd2f3wPL_N_CwF65IIT8UHF7o8A&oe=63B4DB30')]"></div>
+            <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
+              <p className="text-literalBlack text-2xl h-16 overflow-clip text-ellipsis">
+                Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
+              </p>
+            </div>
           </div>
         </div>
       </section>
