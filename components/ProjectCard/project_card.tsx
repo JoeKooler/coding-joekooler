@@ -33,8 +33,8 @@ export default function ProjectCard({ src, description, techStacks }: Props) {
         className={`h-52 md:h-80 bg-center bg-no-repeat bg-cover`}
         style={{ backgroundImage: `url(${src})` }}
       ></div>
-      <div className="h-[7.6rem] md:h-[12.25rem] bg-white pt-8 px-7 pb-4">
-        <p className="text-literalBlack text-2xl h-24 overflow-clip text-ellipsis">
+      <div className="h-36 md:h-[12.25rem] bg-white pb-1 pt-2 md:pt-8 md:pb-4 px-7 ">
+        <p className="text-literalBlack text-lg md:text-2xl h-16 md:h-24 overflow-clip text-ellipsis">
           Lorem ipsum dsgml;dsgmsdl;gsdmlg;dsmgl;sdmgl;dsgmdsl;gmdls;
         </p>
         <div className="h-[1px] w-full bg-backgroundGrey"></div>
