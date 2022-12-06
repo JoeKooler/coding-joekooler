@@ -23,13 +23,34 @@ thanks for reading~
 #### Version 1.0 : Static Website
 - [ ] Home
 - [ ] Devlogs
-- [ ] Resume
+- [ ] ~~Resume~~ Cancelled
 - [ ] Projects
 - [ ] About
 
 #### Version 0.01 : Static Mockup
 - [X] Home
 - [ ] Devlogs
-- [ ] Resume
+- [ ] ~~Resume~~ Cancelled
 - [ ] Proejects
 - [ ] About
+
+## Current State
+- [ ] Home
+  - [X] Navbar
+  - [X] Greetings
+  - [X] Projects Card
+  - [X] Career EXP
+  - [X] Skills
+  - [ ] Footer : Designing
+  
+- [ ] DevLogs : Waiting for design
+  - [ ] Blog lists
+  - [ ] Blog details
+  
+- [ ] ~~Resume~~ Cancelled
+
+- [ ] Projects : Waiting for design
+  - [ ] Card
+  - [ ] Project Descriptions
+
+- [ ] About : Waiting for design
