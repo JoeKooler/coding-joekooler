@@ -217,13 +217,13 @@ export default function Home() {
         <div className="pt-28"></div>
       </section>
 
-      <section className="px-36 h-36 bg-[#1E2024] flex justify-between items-center text-white">
+      <section className="px-0 md:px-36 h-36 bg-[#1E2024] flex justify-between items-center text-white">
         <div>
           <h1>{"©2022 All Rights Reserved Joseph Koolerson"}</h1>
-          <h1>{"(Chitsanupong Klaithin)"}</h1>
+          <h1 className="hidden md:block">{"(Chitsanupong Klaithin)"}</h1>
         </div>
 
-        <div className="px-14 justify-center md:justify-start flex md:px-0">
+        <div className="hidden px-14 justify-center md:justify-start md:flex md:px-0">
           <Link href={"https://github.com/JoeKooler"} className="mr-4">
             <Image
               src={githubIcon}
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
 
         <div className="text-right">
-          <h1>Have an idea? Drop me a message at</h1>
+          <h1 className="hidden md:block">Have an idea? Drop me a message at</h1>
           <address>
             <a href="mailto:josephkoolerson@gmail.com">
               <u>josephkoolerson@gmail.com</u>
