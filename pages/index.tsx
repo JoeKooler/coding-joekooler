@@ -29,15 +29,12 @@ export default function Home() {
           </button>
         </div>
 
-        <li className="hidden px-[25vw] h-24 text-white lg:grid lg:grid-cols-5 gap-4 justify-center content-center justify-items-center">
+        <li className="hidden px-[25vw] h-24 text-white lg:grid lg:grid-cols-4 gap-4 justify-center content-center justify-items-center">
           <Link href="/" className="text-3xl z-10 underline">
             Home
           </Link>
           <Link href="/" className="text-3xl z-10">
             DevLogs
-          </Link>
-          <Link href="/" className="text-3xl z-10">
-            Resume
           </Link>
           <Link href="/" className="text-3xl z-10">
             Projects
@@ -167,7 +164,7 @@ export default function Home() {
         <div className="pt-24"></div>
       </section>
 
-      <section className="min-h-screen bg-backgroundGrey text-white">
+      <section className="bg-backgroundGrey text-white">
         <div className="pt-24"></div>
         <b className="text-5xl text-center block mx-auto">Skills</b>
         <div className="pt-28"></div>
@@ -217,11 +214,63 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="pt-24"></div>
+        <div className="pt-28"></div>
       </section>
 
-      <section >
+      <section className="px-36 h-36 bg-[#1E2024] flex justify-between items-center text-white">
+        <div>
+          <h1>{"©2022 All Rights Reserved Joseph Koolerson"}</h1>
+          <h1>{"(Chitsanupong Klaithin)"}</h1>
+        </div>
 
+        <div className="px-14 justify-center md:justify-start flex md:px-0">
+          <Link href={"https://github.com/JoeKooler"} className="mr-4">
+            <Image
+              src={githubIcon}
+              alt={"githubIcon"}
+              className="duration-500 hover:invert"
+            ></Image>
+          </Link>
+          <Link
+            href={
+              "https://www.linkedin.com/in/chitsanupong-klaithin-729b97162/"
+            }
+            className="mr-4"
+          >
+            <Image
+              src={linkedInIcon}
+              alt={"linkedInIcon"}
+              className="duration-500 hover:invert"
+            ></Image>
+          </Link>
+          <Link href={"https://twitter.com/CodingJoekooler"} className="mr-4">
+            <Image
+              src={twitterIcon}
+              alt={"twitterIcon"}
+              className="duration-500 hover:invert"
+            ></Image>
+          </Link>
+
+          <Link
+            href={"https://www.youtube.com/channel/UCfzx0Ga-7_tzLM-HSrBB67w"}
+            className="mr-4"
+          >
+            <Image
+              src={youtubeIcon}
+              alt={"youtubeIcon"}
+              className="duration-500 hover:invert"
+            ></Image>
+          </Link>
+        </div>
+
+        <div className="text-right">
+          <h1>Have an idea? Drop me a message at</h1>
+          <address>
+            <a href="mailto:josephkoolerson@gmail.com">
+              <u>josephkoolerson@gmail.com</u>
+            </a>
+          </address>
+        </div>
       </section>
     </div>
   );
