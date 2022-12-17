@@ -66,7 +66,7 @@ export default function Home() {
 
           <div className="pt-20"></div>
 
-          <div className="flex flex-nowrap flex-shrink-0 overflow-x-auto">
+          <div className="flex flex-nowrap gap-5 md:gap-10 flex-shrink-0 overflow-x-auto">
             <ProjectCardMock />
             <ProjectCardMock />
             <ProjectCardMock />
