@@ -36,7 +36,7 @@ export default function Navbar({ options }: Props) {
   return (
     <section className={sectionClass}>
       {/* <div className="w-20 h-20 lg:hidden pt-4 -0 pl-4"> */}
-        <button className="w-16 h-16 absolute top-4 left-4">
+        <button className="w-16 h-16 lg:hidden absolute top-4 left-4">
           <Image src={hamburgerIcon} alt={"hamburgerIcon"} />
         </button>
       {/* </div> */}

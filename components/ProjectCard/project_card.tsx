@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Layout from "../layouts";
+import CardTag from "./card_tag";
 
 interface Props {
   src: string;
@@ -8,18 +9,6 @@ interface Props {
   description?: string;
   projectId?: number;
   techStacks?: string[];
-}
-
-interface TagProps {
-  stackName: string;
-}
-
-function CardTag({ stackName }: TagProps) {
-  return (
-    <div className="h-10 bg-backgroundGrey text-center p-2 rounded-2xl mr-2">
-      {stackName}
-    </div>
-  );
 }
 
 export default function ProjectCard({
