@@ -7,6 +7,9 @@ in the future I would probably make it sync. with Medium or something but anyway
 
 thanks for reading~
 
+## Design
+https://www.figma.com/file/e7tvD6Vvg4V4lQ1ySmJyGD/Portfolio?node-id=0%3A1&t=IFrXpTXdiaXg4NPQ-1
+
 ## Roadmap
 
 #### Version 2.0
