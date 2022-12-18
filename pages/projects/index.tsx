@@ -26,7 +26,7 @@ const Projects = () => {
           <ProjectCardMock></ProjectCardMock>
           <ProjectCardMock></ProjectCardMock>
         </section>
-        <div className="w-[1px] bg-white" />
+        <div className="w-[1px] bg-white mx-1" />
 
         <section className="flex-shrink-0 basis-[43rem] hidden xl:block px-5 py-5">
           <div className="MockCarousel w-[40rem] h-[25rem] bg-yellow-400 rounded-2xl"></div>

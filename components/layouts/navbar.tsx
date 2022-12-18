@@ -14,24 +14,26 @@ export default function Navbar({ options }: Props) {
 
   useEffect(() => {
     console.log("Called in useEffect");
+
+    const displayClass = () => {
+      console.log("Called in display class");
+      switch (options.displayType) {
+        case "SeeThrough":
+          setSectionClass("absolute top-0 left-0 w-screen max-w-full");
+          setBGClass("absolute top-0 hidden lg:block w-full h-24 bg-black opacity-25");
+          break;
+        case "Solid":
+          setSectionClass("w-screen max-w-full");
+          setBGClass("absolute hidden lg:block top-0 w-full h-24 bg-[#1E2024]");
+          break;
+        default:
+          break;
+      }
+    };
+
     displayClass();
   }, [options.displayType]);
 
-  const displayClass = () => {
-    console.log("Called in display class");
-    switch (options.displayType) {
-      case "SeeThrough":
-        setSectionClass("absolute top-0 left-0 w-screen max-w-full");
-        setBGClass("absolute top-0 hidden lg:block w-full h-24 bg-black opacity-25");
-        break;
-      case "Solid":
-        setSectionClass("w-screen max-w-full");
-        setBGClass("absolute hidden lg:block top-0 w-full h-24 bg-[#1E2024]");
-        break;
-      default:
-        break;
-    }
-  };
 
   return (
     <section className={sectionClass}>
