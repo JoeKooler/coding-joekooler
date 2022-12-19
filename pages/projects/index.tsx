@@ -1,6 +1,7 @@
 import Layout from "components/layouts";
 import CardTag from "components/ProjectCard/card_tag";
 import ProjectCardMock from "components/ProjectCard/project_card.mock";
+import P from "components/Typography/P";
 import React from "react";
 
 const Projects = () => {
@@ -37,7 +38,7 @@ const Projects = () => {
           <div className="pt-6" />
           <div className="h-[1px] bg-white" />
           <div className="pt-9" />
-          <p>
+          <P varient={"text"} additionalClass={""}>
             Lorem ipsum Lorem ipsum sdajkldsa jdsakl jaskl djaslkajsmlfkn lkan
             rwropq nowqin rwqoirnqw rikoqnroqw rikoqnroq wrikoqnroqw
             rikoqnroqwri koqnroqwrikoqn roqwrikoqnr oqwrikoqnroqwr
@@ -47,12 +48,12 @@ const Projects = () => {
             ikoqnroqwrikoq nroqw Lorem ipsum Lorem ipsum sdajkldsa jdsakl jaskl
             djaslkajsmlfkn lkan rwropq nowqin rwqoirnqw rikoqnroqw rikoqnroq
             wrikoqnroqw rikoqnroqwri koqnroqwrikoqn roqwrikoqnr oqwrikoqnroqwr
-            ikoqnroqwrikoq nroqw{" "}
-          </p>
+            ikoqnroqwrikoq nroqw
+          </P>
           <div className="pt-9" />
           <div className="h-[1px] bg-white" />
           <div className="pt-9" />
-      
+
           <div className="flex justify-between">
             <div>Github Icon</div>
             <div>Made In 06/12/2022</div>
