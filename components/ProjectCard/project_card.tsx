@@ -26,7 +26,7 @@ export default function ProjectCard({
   );
 
   return (
-    <div className="w-80 md:w-[32rem] flex-shrink-0 rounded-2xl overflow-hidden last:mr-0">
+    <div className="w-80 md:w-[32rem] flex-shrink-0 rounded-2xl overflow-hidden last:mr-0 font-sans">
       <div
         className={`h-52 md:h-80 bg-center bg-no-repeat bg-cover relative`}
         style={{ backgroundImage: `url(${src})` }}
