@@ -16,12 +16,14 @@ module.exports = {
   ],
   framework: {
     name: "@storybook/nextjs",
-    options: {},
+    options: {
+      nextConfigPath: path.resolve(__dirname, "../next.config.js"),
+    },
   },
   docs: {
     docsPage: true,
   },
-  webpackFinal: (config) => {
+  webpackFinal: async (config) => {
     /**
      * Add support for alias-imports
      * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
