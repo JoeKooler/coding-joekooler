@@ -38,7 +38,7 @@ const Projects = () => {
           <div className="pt-6" />
           <div className="h-[1px] bg-white" />
           <div className="pt-9" />
-          <P varient={"text"} additionalClass={""}>
+          <P variant={"text"} additionalClass={""}>
             Lorem ipsum Lorem ipsum sdajkldsa jdsakl jaskl djaslkajsmlfkn lkan
             rwropq nowqin rwqoirnqw rikoqnroqw rikoqnroq wrikoqnroqw
             rikoqnroqwri koqnroqwrikoqn roqwrikoqnr oqwrikoqnroqwr

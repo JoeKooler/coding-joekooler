@@ -8,7 +8,7 @@ const varients = {
 };
 
 const H1 = ({
-  varient = "primary",
+  variant: varient = "primary",
   additionalClass = "",
   ...rest
 }: TypographyProps) => {
