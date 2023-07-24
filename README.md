@@ -29,7 +29,7 @@ https://www.figma.com/file/e7tvD6Vvg4V4lQ1ySmJyGD/Portfolio?node-id=0%3A1&t=IFrX
 
 #### Version 1.0 : Static Website
 
-- [ ] Home
+- [x] Home
 - [ ] Devlogs
 - [ ] ~~Resume~~ Cancelled
 - [ ] Projects
@@ -40,28 +40,26 @@ https://www.figma.com/file/e7tvD6Vvg4V4lQ1ySmJyGD/Portfolio?node-id=0%3A1&t=IFrX
 - [x] Home
 - [ ] Devlogs
 - [ ] ~~Resume~~ Cancelled
-- [ ] Proejects
+- [ ] Projects
 - [ ] About
 
 ## Current State
 
-- [ ] Home
-
+- [x] Home
   - [x] Navbar
   - [x] Greetings
   - [x] Projects Card
   - [x] Career EXP
   - [x] Skills
   - [x] Footer : Designing
-
 - [ ] DevLogs : Waiting for design
   - [ ] Blog lists
   - [ ] Blog details
 - [ ] ~~Resume~~ Cancelled
 
-- [ ] Projects : Waiting for design
+- [x] Projects
 
-  - [ ] Card
-  - [ ] Project Descriptions
+  - [x] Card
+  - [x] Project Descriptions
 
-- [ ] About : Waiting for design
+- [ ] About
