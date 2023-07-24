@@ -38,7 +38,7 @@ https://www.figma.com/file/e7tvD6Vvg4V4lQ1ySmJyGD/Portfolio?node-id=0%3A1&t=IFrX
 - [ ] About
 
 ## Current State
-- [ ] Home
+- [X] Home
   - [X] Navbar
   - [X] Greetings
   - [X] Projects Card
