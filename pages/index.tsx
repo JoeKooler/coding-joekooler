@@ -1,13 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import ProjectCard from "../components/ProjectCard/project_card";
-import ProjectCardMock from "../components/ProjectCard/project_card.mock";
-import CareerChart from "../public/career_img/career_chart.webp";
-import CareerChartMobile from "../public/career_img/career_chart_mobile.webp";
-import Layout from "components/layouts";
-import SocialButtons from "components/social-buttons";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import ProjectCard from '../components/ProjectCard/project_card';
+import ProjectCardMock from '../components/ProjectCard/project_card.mock';
+import CareerChart from '../public/career_img/career_chart.webp';
+import CareerChartMobile from '../public/career_img/career_chart_mobile.webp';
+import Layout from 'components/layouts';
+import SocialButtons from 'components/social-buttons';
+import { TECHSTACK } from 'constants/techStack';
 
 // Todo
 // Finish Each section
@@ -16,7 +17,7 @@ import SocialButtons from "components/social-buttons";
 
 export default function Home() {
   return (
-    <Layout navBarOptions={{ displayType: "SeeThrough" }}>
+    <Layout navBarOptions={{ displayType: 'SeeThrough' }}>
       <>
         <section
           className={`min-h-screen bg-center bg-no-repeat bg-cover bg-[url('/joe_bg.png')]`}
@@ -30,14 +31,14 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl text-white md:leading-[1.4] font-extralight">
               {"It's me "}
               <b className="text-primaryPurple font-bold">Joseph Koolerson</b>,
-              your <b className="text-primaryPurple font-bold">Game</b> and{" "}
+              your <b className="text-primaryPurple font-bold">Game</b> and{' '}
               <b className="text-primaryPurple font-bold">Web</b>
-              {" developer"}
+              {' developer'}
             </h1>
             <div className="mt-9 md:mt-4" />
             <h1 className="text-3xl md:text-5xl text-white md:leading-[1.4] font-extralight">
               {"Let's see if some of my "}
-              <Link href={"/projects"}>
+              <Link href={'/projects'}>
                 <u>projects</u>
               </Link>
               <br className="md:hidden" /> caugt your eyes
@@ -67,9 +68,41 @@ export default function Home() {
           <div className="pt-20"></div>
 
           <div className="flex flex-nowrap gap-5 md:gap-10 flex-shrink-0 overflow-x-auto">
-            <ProjectCardMock />
-            <ProjectCardMock />
-            <ProjectCardMock />
+            <ProjectCard
+              src="https://storage.googleapis.com/joe-port-bucket-1/292670856_5488351314550386_7274380543853968100_n.jpg"
+              name="OIC"
+              techStacks={[
+                TECHSTACK.CSHARP,
+                TECHSTACK.UNITY,
+                TECHSTACK.UNIRX,
+                TECHSTACK.DOTWEEN,
+              ]}
+              description={`A play to earn A "Play to Learn" game that is both fun and improves players' knowledge about the real-world insurance system. Responsible for Store, Inventory, Mission, Quiz, Daily rewards, Tournament, and Friend list frontend modules using Unity C#`}
+            />
+            <ProjectCard
+              src="https://storage.googleapis.com/joe-port-bucket-1/TTD.webp"
+              name="TTD"
+              techStacks={[
+                TECHSTACK.REACT_NATIVE,
+                TECHSTACK.TYPESCRIPT,
+                TECHSTACK.REDUX,
+                TECHSTACK.SAGA,
+                TECHSTACK.SC,
+              ]}
+              description="An application for the Thailand Tourism Directory (Official department) using React Native with TypeScript deployed on both the App Store and Play Store"
+            />
+            <ProjectCard
+              src="https://storage.googleapis.com/joe-port-bucket-1/DensoDocTag.png"
+              name="Document tagging"
+              techStacks={[
+                TECHSTACK.NEXT,
+                TECHSTACK.REACT,
+                TECHSTACK.ZUSTAND,
+                TECHSTACK.TAILWIND,
+                TECHSTACK.ANTD,
+              ]}
+              description="A user-friendly frontend application using NextJS, Ant Design, and Tailwind for efficient document management at the Denso factory. Replacing manual document searches, the application greatly improved user experience and saved valuable time for workers"
+            />
           </div>
 
           <div className="pt-16"></div>
@@ -93,12 +126,12 @@ export default function Home() {
           <div className="pt-28"></div>
           <Image
             src={CareerChart}
-            alt={"Career Chart Image"}
+            alt={'Career Chart Image'}
             className="hidden md:block mx-auto"
           ></Image>
           <Image
             src={CareerChartMobile}
-            alt={"Career Chart Mobile Image"}
+            alt={'Career Chart Mobile Image'}
             className="w-screen md:hidden pl-9"
           ></Image>
           <div className="pt-24"></div>
@@ -111,7 +144,7 @@ export default function Home() {
           <div className="grid grid-rows-2 lg:grid-flow-col gap-10 px-12 md:px-36">
             <div className="row-span-2 border-dashed border-2 pl-7 pb-7 relative">
               <b className="absolute -top-6 left-2 bg-backgroundGrey text-2xl md:text-4xl">
-                {"Web Dev (Proficient)"}
+                {'Web Dev (Proficient)'}
               </b>
               <div className="pt-7"></div>
               <ul className="list-disc pl-4">
@@ -131,7 +164,7 @@ export default function Home() {
             </div>
             <div className="border-dashed border-2 pl-7 pb-7 relative">
               <b className="absolute -top-6 left-2 bg-backgroundGrey text-2xl md:text-4xl">
-                {"Web Dev (Basic)"}
+                {'Web Dev (Basic)'}
               </b>
               <div className="pt-7"></div>
               <ul className="list-disc pl-4">
@@ -144,7 +177,7 @@ export default function Home() {
 
             <div className="border-dashed border-2 pl-7 pb-7 relative">
               <b className="absolute -top-6 left-2 bg-backgroundGrey text-2xl md:text-4xl">
-                {"Game Development"}
+                {'Game Development'}
               </b>
               <div className="pt-7"></div>
               <ul className="list-disc pl-4">

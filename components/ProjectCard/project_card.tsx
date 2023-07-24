@@ -1,10 +1,10 @@
-import Link from "next/link";
-import React from "react";
-import Layout from "../layouts";
-import CardTag from "./card_tag";
+import Link from 'next/link';
+import React from 'react';
+import Layout from '../layouts';
+import CardTag from './card_tag';
 
 interface Props {
-  src: string;
+  src?: string;
   name: string;
   description?: string;
   projectId?: number;
@@ -35,7 +35,7 @@ export default function ProjectCard({
           <div className="top-0 left-0 w-full h-full bg-black opacity-75 absolute"></div>
           <Link
             className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-solid border-2 py-2 px-4 absolute duration-500 hover:bg-backgroundGrey hover:invert hover:border-transparent"
-            href={"/projects"}
+            href={'/projects'}
           >
             Read More
           </Link>
@@ -45,7 +45,10 @@ export default function ProjectCard({
         <h1 className="font-bold text-literalBlack text-lg md:text-2xl overflow-clip text-ellipsis">
           {name}
         </h1>
-        <p className="text-literalBlack text-base h-[1.75rem] md:h-[4.5rem] overflow-clip text-ellipsis md:line-clamp-3">
+        <p
+          title={description}
+          className="text-literalBlack text-base h-[1.75rem] md:h-[4.5rem] overflow-clip text-ellipsis md:line-clamp-3"
+        >
           {description}
         </p>
 
