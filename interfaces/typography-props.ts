@@ -1,6 +1,6 @@
 export default interface TypographyProps {
-  variant: 'primary' | 'secondary' | 'danger' | 'text';
+  variant?: 'primary' | 'secondary' | 'danger' | 'text';
   size?: 'small' | 'medium' | 'large';
-  additionalClass: string;
-  children: React.ReactNode;
+  additionalClass?: string;
+  children?: React.ReactNode;
 }

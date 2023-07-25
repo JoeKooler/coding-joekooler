@@ -1,13 +1,13 @@
 import TypographyProps from 'interfaces/typography-props';
 
-const baseClasses = 'text-3xl md:text-5xl';
+const baseClasses = 'text-2xl md:text-4xl';
 
 const variants = {
   primary: 'text-primaryPurple',
   secondary: 'text-white',
 };
 
-const H1 = ({
+const H2 = ({
   variant = 'primary',
   additionalClass = '',
   children,
@@ -20,4 +20,4 @@ const H1 = ({
   );
 };
 
-export default H1;
+export default H2;

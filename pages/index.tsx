@@ -9,13 +9,16 @@ import CareerChartMobile from '../public/career_img/career_chart_mobile.webp';
 import Layout from 'components/layouts';
 import SocialButtons from 'components/social-buttons';
 import { TECHSTACK } from 'constants/techStack';
-
-// Todo
-// Finish Each section
-// Extract Styles to Design System
-// Refactor later to prevent premature abstraction
+import { useEffect } from 'react';
+import useCurrentTabStore from 'stores/currentTab';
 
 export default function Home() {
+  const { setToHome } = useCurrentTabStore();
+
+  useEffect(() => {
+    setToHome();
+  }, []);
+
   return (
     <Layout navBarOptions={{ displayType: 'SeeThrough' }}>
       <>

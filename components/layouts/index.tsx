@@ -1,13 +1,16 @@
-import Navbar from "./navbar";
-import Footer from "./footer";
-import { LayoutOptions } from "interfaces/layout-options";
+import Navbar from './navbar';
+import Footer from './footer';
+import { LayoutOptions } from 'interfaces/layout-options';
 
 interface Props {
-  navBarOptions: LayoutOptions;
-  children: JSX.Element;
+  navBarOptions?: LayoutOptions;
+  children?: JSX.Element;
 }
 
-export default function Layout({ children, navBarOptions }: Props) {
+export default function Layout({
+  children,
+  navBarOptions = { displayType: 'Solid' },
+}: Props) {
   return (
     <>
       <Navbar options={navBarOptions} />
