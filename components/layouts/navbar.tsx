@@ -56,7 +56,7 @@ export default function Navbar({ options }: Props) {
             Home
           </Link>
           <Link
-            href="/"
+            href="/devlogs"
             className={`text-3xl z-10 ${
               currentTab === 'devlogs' ? 'underline' : ''
             }`}
@@ -64,7 +64,7 @@ export default function Navbar({ options }: Props) {
             DevLogs
           </Link>
           <Link
-            href="/"
+            href="/projects"
             className={`text-3xl z-10 ${
               currentTab === 'projects' ? 'underline' : ''
             }`}

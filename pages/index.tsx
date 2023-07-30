@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import ProjectCard from '../components/ProjectCard/project_card';
-import ProjectCardMock from '../components/ProjectCard/project_card.mock';
 import CareerChart from '../public/career_img/career_chart.webp';
 import CareerChartMobile from '../public/career_img/career_chart_mobile.webp';
 import Layout from 'components/layouts';
@@ -11,6 +9,7 @@ import SocialButtons from 'components/social-buttons';
 import { TECHSTACK } from 'constants/techStack';
 import { useEffect } from 'react';
 import useCurrentTabStore from 'stores/currentTab';
+import ShowMoreCard from 'components/ProjectCard/show_more_card';
 
 export default function Home() {
   const { setToHome } = useCurrentTabStore();
@@ -71,7 +70,8 @@ export default function Home() {
           <div className="pt-20"></div>
 
           <div className="flex flex-nowrap gap-5 md:gap-10 flex-shrink-0 overflow-x-auto">
-            <ProjectCard
+            <ShowMoreCard
+              id="OIC"
               src="https://storage.googleapis.com/joe-port-bucket-1/292670856_5488351314550386_7274380543853968100_n.jpg"
               name="OIC"
               techStacks={[
@@ -82,7 +82,8 @@ export default function Home() {
               ]}
               description={`A play to earn A "Play to Learn" game that is both fun and improves players' knowledge about the real-world insurance system. Responsible for Store, Inventory, Mission, Quiz, Daily rewards, Tournament, and Friend list frontend modules using Unity C#`}
             />
-            <ProjectCard
+            <ShowMoreCard
+              id="TTD"
               src="https://storage.googleapis.com/joe-port-bucket-1/TTD.webp"
               name="TTD"
               techStacks={[
@@ -94,7 +95,8 @@ export default function Home() {
               ]}
               description="An application for the Thailand Tourism Directory (Official department) using React Native with TypeScript deployed on both the App Store and Play Store"
             />
-            <ProjectCard
+            <ShowMoreCard
+              id="DensoDocTag"
               src="https://storage.googleapis.com/joe-port-bucket-1/DensoDocTag.png"
               name="Document tagging"
               techStacks={[
