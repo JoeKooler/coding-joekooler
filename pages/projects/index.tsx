@@ -7,7 +7,8 @@ import P from 'components/Typography/P';
 import { TECHSTACK } from 'constants/techStack';
 import { ProjectHLDetail } from 'pages/api/projects';
 import { ProjectDetails } from 'pages/api/projects/[id]';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import useCurrentTabStore from 'stores/currentTab';
 
 const Tags = (tags?: string[]) => (
   <ul className="flex">
@@ -28,13 +29,33 @@ const Projects = ({ data }: Props) => {
   const [selectedProjectData, setSelectedProjectData] =
     useState<ProjectDetails | null>(null);
 
+  const { setToProjects } = useCurrentTabStore();
+
+  useEffect(() => {
+    setToProjects();
+  }, []);
+
+  useEffect(() => {
+    fetchProjectDetail(data[0].id);
+  }, [data.length > 0]);
+
   console.log('SelectedId ', selectedId);
   console.log('Data ', data);
+
+  const fetchProjectDetail = async (id: string) => {
+    try {
+      const projectDetail = (await getProjectFromId(id)).data;
+      setSelectedId(id);
+      setSelectedProjectData(projectDetail);
+    } catch (error) {
+      alert('No data... (yet?)');
+    }
+  };
 
   return (
     <Layout navBarOptions={{ displayType: 'Solid' }}>
       <section className="min-h-screen bg-backgroundGrey flex pt-5 pb-11 text-white">
-        <section className="flex-grow flex flex-wrap justify-between gap-4 px-16 pt-6 h-screen overflow-y-auto">
+        <section className="flex-grow flex flex-wrap justify-between gap-4 px-2 md:px-16 pt-24 md:pt-6 h-screen overflow-y-auto">
           {data.map((datum) => (
             <ProjectCard
               key={datum.id}
@@ -45,13 +66,7 @@ const Projects = ({ data }: Props) => {
               focused={selectedId === datum.id}
               description={datum.description}
               onClick={async (id) => {
-                try {
-                  const projectDetail = (await getProjectFromId(id)).data;
-                  setSelectedId(id);
-                  setSelectedProjectData(projectDetail);
-                } catch (error) {
-                  alert('No data... (yet?)');
-                }
+                await fetchProjectDetail(id);
               }}
             ></ProjectCard>
           ))}

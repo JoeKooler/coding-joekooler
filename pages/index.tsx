@@ -1,6 +1,4 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import CareerChart from '../public/career_img/career_chart.webp';
 import CareerChartMobile from '../public/career_img/career_chart_mobile.webp';
