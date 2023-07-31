@@ -79,20 +79,18 @@ export default function Navbar({ options }: Props) {
         <Image src={hamburgerIcon} alt={'hamburgerIcon'} />
       </button>
       {/* </div> */}
-      <div className="absolute lg:hidden z-50">
-        <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer}>
-          <div className="space-y-2">
-            {tabs.map((tab) => (
-              <Tab
-                key={tab.name}
-                tabName={tab.name}
-                isActive={currentTab === tab.name}
-                onClick={() => handleTabClick(tab.link)}
-              />
-            ))}
-          </div>
-        </Drawer>
-      </div>
+      <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer}>
+        <div className="space-y-2">
+          {tabs.map((tab) => (
+            <Tab
+              key={tab.name}
+              tabName={tab.name}
+              isActive={currentTab === tab.name}
+              onClick={() => handleTabClick(tab.link)}
+            />
+          ))}
+        </div>
+      </Drawer>
 
       <ul>
         <li className="hidden px-[25vw] h-24 text-white lg:grid lg:grid-cols-4 gap-4 justify-center content-center justify-items-center">

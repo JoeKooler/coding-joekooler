@@ -62,14 +62,14 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, children }) => {
       <>
         <div
           id="drawer"
-          className={`fixed inset-y-0 left-0 w-64 bg-backgroundGrey shadow-lg transition-transform duration-300 ease-in-out transform z-[51] drawer-content ${
+          className={` lg:hidden fixed inset-y-0 left-0 w-64 bg-backgroundGrey shadow-lg transition-transform duration-300 ease-in-out transform z-[51] drawer-content ${
             isOpen ? 'translate-x-0' : 'translate-x-[-100%]'
           }`}
         >
           <div className="p-4">{children}</div>
         </div>
         <div
-          className={`z-[50] absolute bg-black w-screen opacity-50 ${
+          className={`lg:hidden z-[50] absolute bg-black w-screen opacity-50 ${
             isOpen ? '' : 'hidden'
           }`}
           style={{ height: `${documentHeight}px` }}
