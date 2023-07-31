@@ -8,6 +8,7 @@ interface currentTabState {
   setToDevlogs: () => void;
   setToProjects: () => void;
   setToAbout: () => void;
+  setCurrentTab: (tab: HeaderTabs | null) => void;
 }
 
 const useCurrentTabStore = create<currentTabState>((set) => ({
@@ -16,6 +17,7 @@ const useCurrentTabStore = create<currentTabState>((set) => ({
   setToDevlogs: () => set({ currentTab: 'devlogs' }),
   setToProjects: () => set({ currentTab: 'projects' }),
   setToAbout: () => set({ currentTab: 'about' }),
+  setCurrentTab: (tab) => set({ currentTab: tab }),
 }));
 
 export default useCurrentTabStore;

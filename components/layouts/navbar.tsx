@@ -3,16 +3,35 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import hamburgerIcon from '@/public/my_hamburger.webp';
 import { LayoutOptions } from 'interfaces/layout-options';
-import useCurrentTabStore from 'stores/currentTab';
+import useCurrentTabStore, { HeaderTabs } from 'stores/currentTab';
+import Drawer from './drawer';
+import Tab from './tab';
+import { useRouter } from 'next/router';
+import useDrawerStore from 'stores/drawerState';
 
 interface Props {
   options: LayoutOptions;
 }
 
+interface TabAttribute {
+  name: HeaderTabs;
+  link: string;
+}
+
+const tabs = [
+  { link: '/', name: 'home' },
+  { link: '/devlogs', name: 'devlogs' },
+  { link: '/projects', name: 'projects' },
+  { link: '/about', name: 'about' },
+] satisfies TabAttribute[];
+
 export default function Navbar({ options }: Props) {
   const [sectionClass, setSectionClass] = useState<string>('');
   const [bgClass, setBGClass] = useState<string>('');
-  const { currentTab } = useCurrentTabStore();
+  const { isDrawerOpen, setIsDrawerOpen } = useDrawerStore();
+  const { currentTab, setCurrentTab } = useCurrentTabStore();
+
+  const router = useRouter();
 
   useEffect(() => {
     console.log('Called in useEffect');
@@ -38,13 +57,43 @@ export default function Navbar({ options }: Props) {
     displayClass();
   }, [options.displayType]);
 
+  const handleOpenDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
+  const handleTabClick = (link: string) => {
+    router.push(link);
+  };
+
   return (
     <section className={sectionClass}>
       {/* <div className="w-20 h-20 lg:hidden pt-4 -0 pl-4"> */}
-      <button className="w-16 h-16 lg:hidden absolute top-4 left-4">
+      <button
+        className="w-16 h-16 lg:hidden absolute top-4 left-4"
+        onClick={handleOpenDrawer}
+      >
         <Image src={hamburgerIcon} alt={'hamburgerIcon'} />
       </button>
       {/* </div> */}
+      <div className="absolute lg:hidden z-50">
+        <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer}>
+          <div className="space-y-2">
+            {tabs.map((tab) => (
+              <Tab
+                key={tab.name}
+                tabName={tab.name}
+                isActive={currentTab === tab.name}
+                onClick={() => handleTabClick(tab.link)}
+              />
+            ))}
+          </div>
+        </Drawer>
+      </div>
+
       <ul>
         <li className="hidden px-[25vw] h-24 text-white lg:grid lg:grid-cols-4 gap-4 justify-center content-center justify-items-center">
           <Link

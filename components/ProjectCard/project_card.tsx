@@ -20,8 +20,6 @@ export default function ProjectCard({
     </>
   );
 
-  console.log('Image Cover Slot? ', ImageCoverSlot);
-
   return (
     <div className="relative w-80 flex-grow max-h-[32.25rem] md:w-[32rem] flex-shrink-0 last:mr-0 font-sans">
       {focused && (
