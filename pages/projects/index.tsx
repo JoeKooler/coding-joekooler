@@ -49,6 +49,7 @@ const Projects = ({ data }: Props) => {
       setSelectedId(id);
       setSelectedProjectData(projectDetail);
     } catch (error) {
+      console.error('Nooooo...', error);
       alert('No data... (yet?)');
     }
   };
