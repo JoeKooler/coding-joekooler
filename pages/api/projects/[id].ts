@@ -1,4 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import Cors from 'cors';
+import { runMiddleware } from 'utils/runMiddleware';
+
+// Initialize the cors middleware
+const cors = Cors({
+  origin: 'https://joekooler.dev',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+});
 
 export interface ProjectDetails {
   id: string;
@@ -47,10 +55,12 @@ const projects = [
   },
 ] satisfies ProjectDetails[];
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ProjectDetails | { error: number }>
 ) {
+  await runMiddleware(req, res, cors);
+
   const { id } = req.query;
   console.log('Req ', req.query);
 
