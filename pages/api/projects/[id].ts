@@ -3,10 +3,27 @@ import Cors from 'cors';
 import { runMiddleware } from 'utils/runMiddleware';
 
 // Initialize the cors middleware
-const cors = Cors({
-  origin: 'https://joekooler.dev',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-});
+
+const allowCors =
+  (fn: Function) => async (req: NextApiRequest, res: NextApiResponse) => {
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    // another common pattern
+    // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.setHeader(
+      'Access-Control-Allow-Methods',
+      'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+    );
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    );
+    if (req.method === 'OPTIONS') {
+      res.status(200).end();
+      return;
+    }
+    return await fn(req, res);
+  };
 
 export interface ProjectDetails {
   id: string;
@@ -55,12 +72,10 @@ const projects = [
   },
 ] satisfies ProjectDetails[];
 
-export default async function handler(
+async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ProjectDetails | { error: number }>
 ) {
-  await runMiddleware(req, res, cors);
-
   const { id } = req.query;
   console.log('Req ', req.query);
 
@@ -75,3 +90,5 @@ export default async function handler(
   res.json(project);
   res.end();
 }
+
+export default allowCors(handler);
