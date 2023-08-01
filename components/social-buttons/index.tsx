@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function SocialButtons() {
   return (
-    <div className="px-14 justify-center md:justify-start flex md:px-0">
+    <div className="px-14 hidden justify-center md:justify-start md:flex md:px-0">
       <Link href={"https://github.com/JoeKooler"} className="mr-4">
         <Image
           src={githubIcon}
