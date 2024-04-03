@@ -1,5 +1,5 @@
+import { ProjectHLDetail } from 'interfaces/projects/project';
 import axiosInstance from 'lib/axios';
-import { ProjectHLDetail } from 'pages/api/projects';
 import { ProjectDetails } from 'pages/api/projects/[id]';
 
 export const getProjects = () => {
