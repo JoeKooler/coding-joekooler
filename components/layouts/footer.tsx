@@ -6,7 +6,7 @@ export default function Footer() {
     <section className="px-2 md:px-36 h-36 bg-[#1E2024] flex justify-between items-center text-white">
       <div>
         <h1 className="text-xs md:text-base">
-          ©2022 All Rights Reserved <br className="md:hidden" /> Joseph
+          ©2024 All Rights Reserved <br className="md:hidden" /> Joseph
           Koolerson
         </h1>
         <h1 className="hidden md:block">{'(Chitsanupong Klaithin)'}</h1>
