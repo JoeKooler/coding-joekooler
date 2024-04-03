@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import CareerChart from '../public/career_img/career_chart.webp';
-import CareerChartMobile from '../public/career_img/career_chart_mobile.webp';
+import CareerChart from '../public/career_img/career_chart.png';
+import CareerChartMobile from '../public/career_img/career_chart_mobile.png';
 import Layout from 'components/layouts';
 import SocialButtons from 'components/social-buttons';
 import { TECHSTACK } from 'constants/techStack';
@@ -69,6 +69,20 @@ export default function Home() {
 
           <div className="flex flex-nowrap gap-5 md:gap-10 flex-shrink-0 overflow-x-auto">
             <ShowMoreCard
+              id="Trinket"
+              src="https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha-1.png"
+              name="Trinket"
+              techStacks={[
+                TECHSTACK.REACT_NATIVE,
+                TECHSTACK.TYPESCRIPT,
+                TECHSTACK.EXPO,
+                TECHSTACK.RECOIL,
+                TECHSTACK.TAMA,
+                // TECHSTACK.GCP,
+              ]}
+              description={`Trinket is the ultimate digital collectibles platform. Each Trinket is a verified collectible with a unique ID that you can show to your friends.`}
+            />
+            <ShowMoreCard
               id="OIC"
               src="https://storage.googleapis.com/joe-port-bucket-1/292670856_5488351314550386_7274380543853968100_n.jpg"
               name="OIC"
@@ -79,19 +93,6 @@ export default function Home() {
                 TECHSTACK.DOTWEEN,
               ]}
               description={`A play to earn A "Play to Learn" game that is both fun and improves players' knowledge about the real-world insurance system. Responsible for Store, Inventory, Mission, Quiz, Daily rewards, Tournament, and Friend list frontend modules using Unity C#`}
-            />
-            <ShowMoreCard
-              id="TTD"
-              src="https://storage.googleapis.com/joe-port-bucket-1/TTD.webp"
-              name="TTD"
-              techStacks={[
-                TECHSTACK.REACT_NATIVE,
-                TECHSTACK.TYPESCRIPT,
-                TECHSTACK.REDUX,
-                TECHSTACK.SAGA,
-                TECHSTACK.SC,
-              ]}
-              description="An application for the Thailand Tourism Directory (Official department) using React Native with TypeScript deployed on both the App Store and Play Store"
             />
             <ShowMoreCard
               id="DensoDocTag"
@@ -130,7 +131,7 @@ export default function Home() {
           <Image
             src={CareerChart}
             alt={'Career Chart Image'}
-            className="hidden md:block mx-auto"
+            className="hidden md:block w-[73rem] md:px-9 mx-auto"
           ></Image>
           <Image
             src={CareerChartMobile}
@@ -160,6 +161,7 @@ export default function Home() {
                   NodeJS, ExpressJS, and NestJS
                 </li>
                 <li className="text-xl md:text-2xl">Socket.IO</li>
+                <li className="text-xl md:text-2xl">Svelte</li>
                 <li className="text-xl md:text-2xl">
                   AWS (Lightsail, Lambda, and IVS)
                 </li>

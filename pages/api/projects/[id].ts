@@ -44,6 +44,72 @@ const projects = [
       'Styled Component',
     ],
   },
+  {
+    id: 'gosoftMig',
+    name: 'GoSoft Project Migration',
+    imageURLs: [
+      'https://www.gosoft.co.th/wp-content/uploads/2019/01/cropped-LOGO-gosoft.png',
+    ],
+    description:
+      'Remade and migrated an old Java servlet application for a client in one of the biggest retail industries in Thailand using React Micro frontend and NodeJS Express for the backend.',
+    startDate: '02/2023',
+    techStacks: [
+      'React',
+      'TypeScript',
+      'Redux',
+      'Ant Design',
+      'Tailwind',
+      'NodeJS',
+      'AWS',
+    ],
+  },
+  {
+    id: 'densoDocTag',
+    name: 'Document tagging',
+    startDate: '01/2023',
+    imageURLs: [
+      'https://storage.googleapis.com/joe-port-bucket-1/DensoDocTag.png',
+    ],
+    description:
+      'A user-friendly frontend application using NextJS, Ant Design, and Tailwind for efficient document management at the Denso factory. Replacing manual document searches, the application greatly improved user experience and saved valuable time for workers',
+    techStacks: ['NextJS', 'React', 'Zustand', 'Tailwind', 'Ant Design'],
+  },
+  {
+    id: 'densoFinalEnergyVisualizer',
+    startDate: '08/23',
+    imageURLs: [
+      'https://storage.googleapis.com/joe-port-bucket-1/denso-final-energy-visualizer/Screenshot%202024-04-03%20162703.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/denso-final-energy-visualizer/Screenshot%202024-04-03%20162754.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/denso-final-energy-visualizer/Screenshot%202024-04-03%20162949.png',
+    ],
+    name: 'Final Energy Visualizer',
+    techStacks: ['NextJS', 'React', 'Zustand', 'Tailwind', 'Ant Design'],
+    description:
+      'A user-friendly frontend application using NextJS, Ant Design, and Tailwind for efficient document management at the Denso factory. Replacing manual document searches, the application greatly improved user experience and saved valuable time for workers',
+  },
+  {
+    id: 'trinket',
+    name: 'Trinket',
+    imageURLs: [
+      'https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha-1.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha-2.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha-3.png',
+      'https://storage.googleapis.com/joe-port-bucket-1/trinket/Alpha-4.png',
+    ],
+    description:
+      'Trinket is the ultimate digital collectibles platform. Each Trinket is a verified collectible with a unique ID that you can show to your friends.',
+    startDate: '08/2023',
+    techStacks: [
+      'React Native',
+      'TypeScript',
+      'Expo',
+      'Zustand',
+      'Tamagui',
+      'NodeJS',
+      'GCP',
+    ],
+  },
 ] satisfies ProjectDetails[];
 
 export default function handler(

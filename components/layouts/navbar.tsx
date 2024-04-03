@@ -103,7 +103,7 @@ export default function Navbar({ options }: Props) {
             Home
           </Link>
           <Link
-            href="/devlogs"
+            href="https://medium.com/@codingjoekooler"
             className={`text-3xl z-10 ${
               currentTab === 'devlogs' ? 'underline' : ''
             }`}
