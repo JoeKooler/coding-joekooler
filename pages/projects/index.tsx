@@ -6,7 +6,7 @@ import ProjectCardMock from 'components/ProjectCard/project_card.mock';
 import P from 'components/Typography/P';
 import { TECHSTACK } from 'constants/techStack';
 import { Alert, Carousel } from 'flowbite-react';
-import { ProjectHLDetail } from 'pages/api/projects';
+import { ProjectHLDetail } from 'interfaces/projects/project';
 import { ProjectDetails } from 'pages/api/projects/[id]';
 import React, { useEffect, useState } from 'react';
 import useCurrentTabStore from 'stores/currentTab';
