@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 import CardTag from './card_tag';
 import { ProjectCardProps } from 'interfaces/projects/project_card';
 
+const TAG_LIMIT = 4;
+
 export default function ProjectCard({
   id,
   src,
@@ -14,9 +16,16 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const Tags = () => (
     <>
-      {techStacks?.map((e) => (
-        <CardTag stackName={e} key={e} />
-      ))}
+      {techStacks?.map((e, i) => {
+        if (i > TAG_LIMIT) return <></>;
+
+        if (i === TAG_LIMIT)
+          return (
+            <CardTag stackName={`+${techStacks.length - TAG_LIMIT}`} key={e} />
+          );
+
+        return <CardTag stackName={e} key={e} />;
+      })}
     </>
   );
 
